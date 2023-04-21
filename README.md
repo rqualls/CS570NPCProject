@@ -24,4 +24,5 @@ By default, the project assumes the following directory structure:
 to run any python file:
 ```python3 fileName.py```
 python or python3 should be installed: https://www.python.org/downloads/
-the libraries random and copy but they come with python and does not need to be installed
+
+The libraries random and copy but they come with python and does not need to be installed
