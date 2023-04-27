@@ -21,7 +21,7 @@ By default, the project assumes the following directory structure:
     ¦   +-- rlqualls                                                # Problems that the author (Rachel) created
     ¦       +-- subsetsum_hard_rlqualls.dat                         # Demonstrates a difficult problem that huristic gets incorrect
     ¦       +-- subsetsum_intractable_rlqualls.dat                  # Demonstrates intractable problem for brute force
-
+    ¦
     ¦   +-- *other student's code files mapping and results*        # Other student code files, mappings, and solutions
     ¦       ...
     ¦
