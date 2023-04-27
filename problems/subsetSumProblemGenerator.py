@@ -6,11 +6,11 @@ import random
 
 # **Input the following presets to generate problem
 # Name of file problem will be written in
-fileName = "subsetsum1_rlqualls.dat"
+fileName = "subsetsum_exampleProblem.dat"
 # size of set
-size = 20
+size = 50
 # max int to sum to
-maxSum = 5000
+maxSum = 10000
 # max int to each num in the set can be
 maxNum = 500
 

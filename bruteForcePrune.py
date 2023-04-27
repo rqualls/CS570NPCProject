@@ -5,8 +5,8 @@
 
 import copy
 
-# change name files read to and from
-fileName = "subsetsum1_rlqualls.dat"
+# !change name files read to and from
+fileName = "rlqualls/subsetsum_rlqualls.dat"
 
 # name files read to and from used in the program
 readFileName = "problems/" + fileName

@@ -5,9 +5,9 @@
 # However the source below gives a way to map solutions
 # Reduction from: https://www.cs.cornell.edu/courses/cs4820/2015sp/notes/reduction-subsetsum.pdf
 
-# change name files read to and from
-readFile = "subsetsum_rlqualls.dat"
-writeFile = "partition.dat"
+# !change name files read to and from
+readFile = "3SAT->SubsetSum_mapping_demo/3sat_exampleProblem.dat"
+writeFile = "3SAT->SubsetSum_mapping_demo/subsetsum_exampleProblem.dat"
 
 # name files read to and from used in the program
 readFileName = "problems/" + readFile
@@ -18,6 +18,7 @@ source = open(readFileName, "r")
 sink = open(writeFileName, "w")
 
 # extract problem from read file and put problem in prob array
+max = int((source.readline()).strip())
 line = source.readline()
 prob = []
 
@@ -25,14 +26,16 @@ while(line):
   if line.strip() == "$":
     break
   # make 2d array or 1d array of clusters
-  cluster = []
-  arr = (line.strip()).split(' ')
+  cluster = [None] * (max + 1)
+  # convert to int
+  strarr = (line.strip()).split(' ')
+  arr = [int(numeric_string) for numeric_string in strarr]
   # represent true (positive) with 1 and false (negitive) with 0
   for num in arr:
     if int(num) > 0:
-      cluster.append(1)
+      cluster[abs(num)] = 1
     if int(num) < 0:
-      cluster.append(0)
+      cluster[abs(num)]  = 0
   # append each cluster to the problem
   prob.append(cluster)
   line = source.readline()
@@ -42,12 +45,13 @@ subset = []
 
 # create a and b for each var in the 3SAT problem
 # add them to the subset
-for i in range(3):
-  a = 10 ** (len(prob) + i + 1)
-  b = 10 ** (len(prob) + i + 1)
+for i in range(1,max + 1):
+  a = 10 ** (len(prob) + i)
+  b = 10 ** (len(prob) + i)
   for j in range(len(prob)):
-    a += prob[j][i] * (10 ** (j + 1))
-    b -= (prob[j][i] - 1) * (10 ** (j + 1))
+    if prob[j][i] is not None:
+      a += prob[j][i] * (10 ** (j + 1))
+      b -= (prob[j][i] - 1) * (10 ** (j + 1))
   subset.append(a)
   subset.append(b)
 
@@ -59,8 +63,8 @@ for i in range(len(prob)):
   
 # generate m (the sum)
 m = 0
-for i in range(3):
-  m += 10 ** (len(prob) + i + 1)
+for i in range(1,max + 1):
+  m += 10 ** (len(prob) + i)
 for i in range(len(prob)):
   m += 3 * (10 ** (i + 1))
 

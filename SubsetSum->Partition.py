@@ -5,9 +5,9 @@
 # However the source below gives a way to map solutions
 # reduction from: https://www.cs.cmu.edu/~arielpro/15251/Recitations/recitation07.pdf
 
-# change name files read to and from
-readFile = "subsetsum_rlqualls.dat"
-writeFile = "partition.dat"
+# !change name files read to and from
+readFile = "SubsetSum->Partition_mapping_demo/subsetsum_exampleProblem.dat"
+writeFile = "SubsetSum->Partition_mapping_demo/partition_exampleProblem.dat"
 
 # name files read to and from used in the program
 readFileName = "problems/" + readFile

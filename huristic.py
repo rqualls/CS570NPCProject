@@ -6,8 +6,8 @@
 
 import copy
 
-# change name files read to and from
-fileName = "subsetsum_rlqualls.dat"
+# !change name files read to and from
+fileName = "rlqualls/subsetsum_rlqualls.dat"
 
 # name files read to and from used in the program
 readFileName = "problems/" + fileName
@@ -101,7 +101,7 @@ def subsetSum(num, set, totalIt):
     if type(result) == list:
         return result, num
     else:
-        return None
+        return None, num
 
 solution, sum = subsetSum(num, set, totalIt)
 print("solution: ", solution)
