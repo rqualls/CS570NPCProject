@@ -1,7 +1,14 @@
 # CS570NPCProject
 
-This NP Complete project focuses on the Subset Sum problem. 
-It includes two brute force solutions (one using pruning and is thus much faster) and a huristic, as well as two mappings (3SAT->SubsetSum and SubsetSum->Partition) and example problems.
+This NP Complete project focuses on the Subset Sum problem.
+
+The Subset Sum problem is as follows: given a set of integers (possible restricted to be non-negative) determine if there is a subset that sums to a given goal number
+
+This project includes two brute force solutions (one using pruning and is thus much faster) and a huristic, as well as two mappings (3SAT->SubsetSum and SubsetSum->Partition) and example problems. There are example files found under the problem file for each mapping that shows the input and output to each mapping problem in 3SAT->SubsetSum_mapping_demo and SubsetSum->Partition_mapping_demo. The file rlqualls holds two Subset Sum problems: one where the huristic solution finds a different answer than the brute force actual solution and one which is intractable for the brute force solver. Each file is annotated with brute force or huristic solutions at the bottom.
+
+Other student's problem files and mappings are included under the problem folder under their names.
+
+Additional information of each file can be found in the Project Structure or in the header/ comments of each file.
 
 
 ## Project Structure
